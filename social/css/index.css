@@ -1,0 +1,151 @@
+body{
+	background: url("../img/background.gif");
+	background-size:cover;
+	position:relative;
+	margin: 0;
+
+}
+.container{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center%;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 40%;
+	padding-top: 0px
+
+}
+.containerl{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center%;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 40%;
+	padding-top: 0px
+
+}
+.box {
+         width: 300px;
+         height: 600px;
+}
+.boxl {
+         width: 300px;
+         height: 400px;
+}
+div.login{
+	width: 250px;
+	height: 120px;
+	text-align: center;
+	margin-right:0px;
+	margin: 0 auto;
+	padding-top: 45px;
+}
+a{
+		color: white;
+	 text-decoration:none;
+}
+a.voltar{
+	color: white;
+	 text-decoration:none;
+}
+.entrar-cadastrar{
+	background-color: #cc0000;
+	border: solid 0px;
+	color: #fff;
+	font-size: 1em;
+	border-radius: 5px;
+	padding: 7px;
+	margin: 15px 15px 0px 0px;
+}
+.botao{
+	background-color: #cc0000;
+	border: solid 0px;
+	font-size: 1em;
+	border-radius: 5px;
+	padding: 7px;
+	margin: 15px 15px 0px 0px;
+	width: 80px;
+     height: 20px;
+}
+.cadastro{
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 300px;
+	height: 450px;
+	margin: 0 auto;
+	position: absolute;
+
+}
+form{
+	width: 200px;
+	text-align: center;
+	margin-right:0px;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+.login{
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 250px;
+	height: 200px;
+	margin: 0 auto;
+	position: absolute;
+}
+div.header{
+	border: solid 0px;
+	font-size: 1em;
+	border-radius: 5px;
+	padding: 70px; 
+	width: 250px;
+     height: 20px;
+}
+.welcome{
+	text-align: center;
+	font-size: 8em;
+	font-family: serif;
+	text-align: center;
+	color:white;
+	color:red;
+	width: 620px;
+    height: 250px;
+    padding-left: 70%;
+}
+	
+}
+.flip-container { perspective: 100%; 
+					margin: 190px auto;
+}  	
+
+/* acina com mouse*/
+.flip-container:hover .flipper, .flip-container.hover .flipper {  		
+  transform: rotateY(180deg);  	
+}    
+.flip-container, .front, .back {  	
+  width: 600px;  	
+  height: 100px;
+}
+
+/* velocidade */
+.flipper {  	
+  transition: 0.6s;  	
+  transform-style: preserve-3d;    	
+  position: relative;  
+}
+    
+/* esconde o verso */
+.front, .back {  	
+  backface-visibility: hidden;    	
+  position: absolute;  	
+  top: 0;  	
+ left: 0;  
+}
+    
+
+.front { z-index: 2;  }    
+
+.back { transform: rotateY(180deg); }
