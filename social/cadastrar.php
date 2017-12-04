@@ -9,7 +9,7 @@
 			$username = trim($_POST['user']);
 			$passw = trim($_POST['senha']);
 			$cpassw = trim($_POST['csenha']);
-			$data= trim($_POST['data'])
+			$data= trim($_POST['data']);
 
 			$conexao = mysqli_connect("localhost", "root", "","redeSocial");
 
@@ -18,39 +18,35 @@
 				exit();
 			}
 
-			// Verficação de cadastro
-			//nome
+			
 			if ($nome == ''){
 				$flag[0] = "true";
 			}
-			//sobrenome
 			if ($snome == ""){
 				$flag[1] = 'true';
 			}
-			//email
-			if (filter_var($email,FILTER_VALIDATE_EMAIL) == false){
+				if (filter_var($email,FILTER_VALIDATE_EMAIL) == false){
 				$flag[2] = 'true';
 			}
-			// Confirmacao de email
+			
 			if (filter_var($cemail,FILTER_VALIDATE_EMAIL) == false){
 				$flag[3] = 'true';
 			}
-			// senha
 			if ($passw == '' and strlen($passw) >= 5 and strlen($passw) <= 20){
 				$flag[5] = 'true';
 			}
-			//Confirmacao de senha
+			
 			if ($cpassw == '' and strlen($passw) >= 5 and strlen($passw) <= 20) {
 				$flag[6] = 'true';
 			}
-			//sexo
+			
 			if (isset($_POST['sexo'])){
 				$sexo = $_POST['sexo'];
 				} else {
 				$flag[7] = "true";
 			}
 
-			// Verificação de senha e email, verficação de banco
+			
 			if($passw == $cpassw && $email == $cemail){
 				$select = mysqli_query ($conexao,'SELECT * FROM perfil');
 
@@ -76,7 +72,7 @@
 					$novoId = mysqli_num_rows($select);
 					$novoId++;
 					$passw = hash("sha512",$passw);
-					//insere dados no Banco de Dados
+					
 					$query = "INSERT INTO perfil (idPerfil,nome,sobrenome,sexo,email,nomeUsuario,senha, datanasc)
 								VALUES
 									('$novoId','$nome','$snome','$sexo','$email','$username','$passw','$data')";
@@ -87,18 +83,14 @@
 						var_dump(mysqli_error($conexao));
 						die ("Erro ao cadastrar");
 					}
-					// Mantém na página caso haja erro
+					
 					}
 					if($flag[4] == true){
 						echo "Usuario ". $username ." ja cadastrado";
-					}
-					else{
-						echo"Email ". $email ." esta cadastrado";
-					}
-				}
-				else{
+					}else{
 					echo "Confirmacao de email ou senha incorreta";
 			}
+		}
 	}
 	?>
 

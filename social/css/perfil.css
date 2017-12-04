@@ -61,7 +61,7 @@ a{
 	color: white;
 	 text-decoration:none;
 }
-div.botao{
+div.voltar{
 	background-color: #cc0000;
 	border: solid 0px;
 	font-size: 1em;
@@ -70,4 +70,8 @@ div.botao{
 	margin: 15px 15px 0px 0px;
 	width: 80px;
      height: 20px;
+}
+a.voltar{
+	color: white;
+	 text-decoration:none;
 }
